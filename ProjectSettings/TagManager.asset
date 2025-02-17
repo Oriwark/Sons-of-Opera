@@ -6,6 +6,7 @@ TagManager:
   tags:
   - CinemachineTarget
   - Key
+  - Knob
   layers:
   - Default
   - TransparentFX
