@@ -8,6 +8,8 @@ TagManager:
   - Key
   - Knob
   - Bolt
+  - Hitbox
+  - Hurtbox
   layers:
   - Default
   - TransparentFX
