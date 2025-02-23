@@ -10,6 +10,7 @@ TagManager:
   - Bolt
   - Hitbox
   - Hurtbox
+  - Nota
   layers:
   - Default
   - TransparentFX
