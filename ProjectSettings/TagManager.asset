@@ -11,6 +11,11 @@ TagManager:
   - Hitbox
   - Hurtbox
   - Nota
+  - Knob__a
+  - Knob__b
+  - Keys__A
+  - ragObject
+  - toraycast
   layers:
   - Default
   - TransparentFX
