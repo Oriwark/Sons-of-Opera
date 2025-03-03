@@ -16,6 +16,8 @@ TagManager:
   - Keys__A
   - ragObject
   - toraycast
+  - HitBox
+  - HurtBox
   layers:
   - Default
   - TransparentFX
