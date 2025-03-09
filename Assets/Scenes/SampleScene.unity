@@ -13027,7 +13027,7 @@ Transform:
   m_GameObject: {fileID: 338176194}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.70710576, z: -0, w: 0.70710784}
-  m_LocalPosition: {x: 51, y: 11.864, z: 15.55}
+  m_LocalPosition: {x: 34.39, y: 17.4, z: 15.55}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -38780,7 +38780,9 @@ MonoBehaviour:
       m_Calls: []
   cameraTransform: {fileID: 454526399}
   raycastDistance: 2
-  tagsWithOtherRaycasted: []
+  tagsWithOtherRaycasted:
+  - Nota
+  - Key
   debugRay: 0
   turnOffKeyItemAfterTake: 1
   onTakeKeyItemUnityEvent:
@@ -50846,7 +50848,7 @@ Transform:
   m_GameObject: {fileID: 1204868298}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.70710576, z: 0, w: 0.70710784}
-  m_LocalPosition: {x: 34.41501, y: -40.54, z: -34.14723}
+  m_LocalPosition: {x: 17.805006, y: -35.004, z: -34.14723}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
