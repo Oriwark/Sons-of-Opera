@@ -50,7 +50,7 @@ namespace SotomaYorch.Mechanics
             }
             if (tagsWithOtherRaycasted?.Length == 0)
             {
-                Debug.LogError(gameObject.name + " : RaycastEffects - There are no assigned tags for raycast effects!!!");
+                Debug.LogError(gameObject.name + " : RaycastEffects - There are no assigned tags for raycast effects!!!",gameObject);
             }
 
             if (debugRay)

@@ -75,7 +75,7 @@ namespace SotomaYorch.Mechanics
                     Debug.LogError(gameObject.name + " : LoadKeyItemEffects - " +
                         "Missing TAG. " +
                         "The tag "+ inventoryTag + " from the inventory is not listed in this LoadKeyItemEffect script. " +
-                        "Please add it so this script works properly");
+                        "Please add it so this script works properly",gameObject);
                 }
             }
         }
