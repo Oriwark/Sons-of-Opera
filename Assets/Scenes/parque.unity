@@ -934,6 +934,51 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &466621446
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 466621448}
+  - component: {fileID: 466621447}
+  m_Layer: 0
+  m_Name: objetivo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &466621447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 466621446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1a298d836c8b464eb5360b59a4d20ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objetoAEliminar: {fileID: 220891041}
+--- !u!4 &466621448
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 466621446}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.7286124, y: -11.782878, z: 37.06238}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &468113079
 Mesh:
   m_ObjectHideFlags: 0
@@ -2584,6 +2629,64 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &816429497
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 816429500}
+  - component: {fileID: 816429499}
+  - component: {fileID: 816429498}
+  m_Layer: 0
+  m_Name: escena
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &816429498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 816429497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 275ecbcaeeb841845b0a5dbc2bd0004f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nombreEscena: SampleScene
+--- !u!114 &816429499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 816429497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cc5f25dcd2f1994283cb9951d3d206a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &816429500
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 816429497}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.612269, y: 2.0737388, z: 43.52849}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &838054272
 Mesh:
   m_ObjectHideFlags: 0
@@ -3593,6 +3696,14 @@ PrefabInstance:
     - target: {fileID: 1897223139139448435, guid: 56b01a125438ccb4db458141969d9c66, type: 3}
       propertyPath: m_LocalPosition.z
       value: -24.269999
+      objectReference: {fileID: 0}
+    - target: {fileID: 3245987225946187765, guid: 56b01a125438ccb4db458141969d9c66, type: 3}
+      propertyPath: objetoADestruir
+      value: 
+      objectReference: {fileID: 220891041}
+    - target: {fileID: 3245987225946187765, guid: 56b01a125438ccb4db458141969d9c66, type: 3}
+      propertyPath: objetosNecesarios
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5383428196380190207, guid: 56b01a125438ccb4db458141969d9c66, type: 3}
       propertyPath: m_Name
@@ -4814,6 +4925,7 @@ GameObject:
   - component: {fileID: 1828728318}
   - component: {fileID: 1828728317}
   - component: {fileID: 1828728316}
+  - component: {fileID: 1828728319}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -4869,6 +4981,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!114 &1828728319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828728315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 275ecbcaeeb841845b0a5dbc2bd0004f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nombreEscena: parque
 --- !u!1 &1917662788
 GameObject:
   m_ObjectHideFlags: 0
@@ -6051,7 +6176,7 @@ GameObject:
   - component: {fileID: 5027180559848747543}
   - component: {fileID: 7102152365555134042}
   m_Layer: 0
-  m_Name: jardin
+  m_Name: notas
   m_TagString: Nota
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9130,7 +9255,7 @@ GameObject:
   - component: {fileID: 3807450549907638327}
   - component: {fileID: 5304348837414073056}
   m_Layer: 0
-  m_Name: jardin
+  m_Name: notas
   m_TagString: Nota
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9856,7 +9981,7 @@ GameObject:
   - component: {fileID: 5940171739926992342}
   - component: {fileID: 7109603164331908399}
   m_Layer: 0
-  m_Name: jardin
+  m_Name: notas
   m_TagString: Nota
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10127,7 +10252,7 @@ GameObject:
   - component: {fileID: 3543869026339709194}
   - component: {fileID: 4817846284224277960}
   m_Layer: 0
-  m_Name: jardin
+  m_Name: notas
   m_TagString: Nota
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10602,7 +10727,7 @@ GameObject:
   - component: {fileID: 885873982023085931}
   - component: {fileID: 819358820550994392}
   m_Layer: 0
-  m_Name: jardin
+  m_Name: notas
   m_TagString: Nota
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10911,7 +11036,7 @@ GameObject:
   - component: {fileID: 2525714247342612680}
   - component: {fileID: 3144322434530608235}
   m_Layer: 0
-  m_Name: jardin
+  m_Name: notas
   m_TagString: Nota
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13241,7 +13366,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
@@ -14152,7 +14277,7 @@ GameObject:
   - component: {fileID: 5088694303612017389}
   - component: {fileID: 920109145719047603}
   m_Layer: 0
-  m_Name: jardin
+  m_Name: notas
   m_TagString: Nota
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16717,7 +16842,7 @@ GameObject:
   - component: {fileID: 3750143462683518061}
   - component: {fileID: 1208174418258208285}
   m_Layer: 0
-  m_Name: jardin
+  m_Name: notas
   m_TagString: Nota
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18558,7 +18683,7 @@ GameObject:
   - component: {fileID: 5073518129501079886}
   - component: {fileID: 276958113557163425}
   m_Layer: 0
-  m_Name: jardin
+  m_Name: notas
   m_TagString: Nota
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19014,7 +19139,7 @@ Transform:
   m_GameObject: {fileID: 4122099936334997418}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 56.268005, y: -2.0900002, z: 4.84}
+  m_LocalPosition: {x: 56.42, y: -2.0900002, z: 4.84}
   m_LocalScale: {x: 0.3178946, y: 0.5669, z: 0.5669}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -20522,13 +20647,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7043766656544091065}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.10562937, y: 0.69793713, z: 0.105248444, w: -0.70046335}
-  m_LocalPosition: {x: 31.155998, y: -0.3710003, z: -13.1709}
+  m_LocalRotation: {x: -0.013308389, y: 0.70575976, z: -0.014108939, w: -0.7081858}
+  m_LocalPosition: {x: 31.155998, y: 0.33, z: -13.1709}
   m_LocalScale: {x: 1.7890003, y: 1, z: 1.550092}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7903915325696578471}
-  m_LocalEulerAnglesHint: {x: -17.151, y: 270.207, z: 0}
+  m_LocalEulerAnglesHint: {x: 2.222, y: 270.198, z: 0.069}
 --- !u!33 &8578166635701405382
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -20572,7 +20697,7 @@ GameObject:
   - component: {fileID: 6623418436588662576}
   - component: {fileID: 4581664620026363848}
   m_Layer: 0
-  m_Name: jardin
+  m_Name: notas
   m_TagString: Nota
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21267,3 +21392,5 @@ SceneRoots:
   - {fileID: 1828728318}
   - {fileID: 1161085571}
   - {fileID: 2028567384}
+  - {fileID: 816429500}
+  - {fileID: 466621448}
