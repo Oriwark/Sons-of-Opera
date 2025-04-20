@@ -1,4 +1,5 @@
-using UnityEngine;
+ï»¿using UnityEngine;
+using System.Collections;
 
 public class MovimientoCoche : MonoBehaviour
 {
@@ -7,44 +8,86 @@ public class MovimientoCoche : MonoBehaviour
     public float velocidad = 5f;
     public float tiempoEspera = 0.5f;
 
-    // Ruedas
-    public Transform[] ruedas; // Asigna 4 ruedas en el inspector
-    public float velocidadRotacion = 360f; // grados por segundo
+    public Transform[] ruedas;
+    public float velocidadRotacion = 360f;
 
-    private bool yendoAlFinal = true;
+    public Renderer[] renderers; // Asigna todos los renderers del coche
 
     void Start()
     {
         transform.position = puntoInicial;
-        StartCoroutine(MoverCiclicamente());
+        StartCoroutine(MoverYReiniciar());
     }
 
-    System.Collections.IEnumerator MoverCiclicamente()
+    IEnumerator MoverYReiniciar()
     {
         while (true)
         {
-            Vector3 destino = yendoAlFinal ? puntoFinal : puntoInicial;
-
-            while (Vector3.Distance(transform.position, destino) > 0.1f)
+            // Mover hacia punto final
+            while (Vector3.Distance(transform.position, puntoFinal) > 0.1f)
             {
-                // Mover el coche
-                transform.position = Vector3.MoveTowards(transform.position, destino, velocidad * Time.deltaTime);
+                transform.position = Vector3.MoveTowards(transform.position, puntoFinal, velocidad * Time.deltaTime);
 
-                // Rotar las ruedas
                 foreach (Transform rueda in ruedas)
                 {
-
-                    // Algunas variantes que podrías probar:
-                    rueda.Rotate(Vector3.forward, velocidadRotacion * Time.deltaTime, Space.Self);
-
-
-                    yield return null;
+                    rueda.Rotate(Vector3.right, velocidadRotacion * Time.deltaTime, Space.Self);
                 }
 
-                // Pequeña pausa y luego invertir dirección
-                yield return new WaitForSeconds(tiempoEspera);
-                yendoAlFinal = !yendoAlFinal;
+                yield return null;
+            }
+
+            yield return new WaitForSeconds(tiempoEspera);
+
+            // âœ¨ Desvanecer (Fade Out)
+            yield return StartCoroutine(FadeOut());
+
+            // Teletransportar
+            transform.position = puntoInicial;
+
+            // âœ¨ Reaparecer (Fade In)
+            yield return StartCoroutine(FadeIn());
+
+            yield return new WaitForSeconds(tiempoEspera);
+        }
+    }
+
+    IEnumerator FadeOut(float duration = 1f)
+    {
+        float elapsed = 0f;
+        while (elapsed < duration)
+        {
+            float alpha = Mathf.Lerp(1f, 0f, elapsed / duration);
+            SetAlpha(alpha);
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+        SetAlpha(0f);
+    }
+
+    IEnumerator FadeIn(float duration = 1f)
+    {
+        float elapsed = 0f;
+        while (elapsed < duration)
+        {
+            float alpha = Mathf.Lerp(0f, 1f, elapsed / duration);
+            SetAlpha(alpha);
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+        SetAlpha(1f);
+    }
+
+    void SetAlpha(float alpha)
+    {
+        foreach (Renderer r in renderers)
+        {
+            foreach (Material mat in r.materials)
+            {
+                Color c = mat.color;
+                c.a = alpha;
+                mat.color = c;
             }
         }
     }
 }
+
