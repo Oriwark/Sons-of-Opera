@@ -8,7 +8,8 @@ public class DestruirYReiniciar : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Destroy(gameObject); // Destruye este objeto
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name); // Reinicia el nivel
+            SceneManager.LoadScene("GameOver"); // Cambia "GameOver" por el nombre exacto de tu escena
+
         }
     }
 
